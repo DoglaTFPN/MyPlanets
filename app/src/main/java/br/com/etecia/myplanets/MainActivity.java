@@ -1,12 +1,15 @@
 package br.com.etecia.myplanets;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 0;
+            return imagemPlanetas.length;
         }
 
         @Override
@@ -50,7 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            return null;
+
+            ImageView imgPlanetas;
+            TextView txtPlanetas;
+
+            View view1 = getLayoutInflater().inflate(R.layout.modelo_planetas,null);
+            txtPlanetas = view1.findViewById(R.id.txtModeloPlaneta);
+            imgPlanetas = view1.findViewById(R.id.imgModeloPlaneta);
+
+            txtPlanetas.setText(nomePlaneta[i]);
+            imgPlanetas.setImageResource(imagemPlanetas[i]);
+
+            return view1;
         }
     }
 }
