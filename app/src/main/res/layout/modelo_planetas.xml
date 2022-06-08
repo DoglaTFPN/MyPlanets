@@ -22,8 +22,7 @@
             android:layout_gravity="center"
             android:text="Terra"
             android:textColor="#000"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
 
