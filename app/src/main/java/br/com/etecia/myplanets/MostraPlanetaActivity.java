@@ -1,9 +1,11 @@
 package br.com.etecia.myplanets;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +29,25 @@ public class MostraPlanetaActivity extends AppCompatActivity {
 
         txtMostrarPlanetas.setText(nomePlaneta);
         imgMostrarPlanetas.setImageResource(imagemPlanetas);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home){
+            onBackPressed();
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
