@@ -23,6 +23,6 @@
         android:layout_marginTop="50sp"
         android:text="Terra"
         android:textColor="@color/black"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 </LinearLayout>
